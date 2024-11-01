@@ -8,18 +8,11 @@ export const CustomInput = styled(TextInput)`
 
   background-color: '#FFF';
   color: ${({ theme }) => theme.COLORS.BLACK};
-  padding: 6px 6px 0px 10px;
+  padding: 6px 6px 6px 10px;
 
   font-family: ${({ theme }) => theme.FONTS.REGULAR};
   font-size: 14px;
   border-radius: 8px;
 
   border: 1px ${({ theme }) => theme.COLORS.DARK_GRAY};
-`;
-
-export const Label = styled.Text`
-    color: ${({ theme }) => theme.COLORS.BLACK};
-    font-family: ${({ theme }) => theme.FONTS.REGULAR};
-    font-size: 16px;
-    margin-bottom: 6px;
 `;

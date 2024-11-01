@@ -5,6 +5,7 @@ import { SignIn } from './src/screens/SignIn';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './src/style/theme';
 import { Loading } from './src/components/Loading';
+import { SignUp } from './src/screens/SignUp';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Poppins_400Regular, Poppins_500Medium, Poppins_700Bold });
@@ -19,7 +20,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <SignIn />
+      <SignUp />
     </ThemeProvider>
   );
 }

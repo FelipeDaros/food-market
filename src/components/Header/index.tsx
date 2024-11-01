@@ -1,15 +1,24 @@
-import { Container, SubTitle, Title } from "./styles";
+import { TouchableOpacity, View } from "react-native";
+import { BackIcon, Container, ContainerBackButton, ContainerTitles, SubTitle, Title } from "./styles";
 
 type Props = {
   title: string;
+  back?: boolean;
   subTitle?: string;
 }
 
-export function Header({ title, subTitle }: Props){
-  return(
+export function Header({ title, back = false, subTitle }: Props) {
+  return (
     <Container>
-      <Title>{title}</Title>
-      <SubTitle>{subTitle}</SubTitle>
+      {back && (
+        <ContainerBackButton>
+          <BackIcon name="left" />
+        </ContainerBackButton>
+      )}
+      <ContainerTitles>
+        <Title>{title}</Title>
+        {subTitle && <SubTitle>{subTitle}</SubTitle>}
+      </ContainerTitles>
     </Container>
-  )
+  );
 }
